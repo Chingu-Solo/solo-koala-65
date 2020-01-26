@@ -1,0 +1,94 @@
+<DOCTYPE html>
+<html>
+<head>
+	<title>
+		Favorite Fonts
+	</title>
+</head>
+<style type="text/css">
+	#header{padding: 2em 5em 0em 5em; overflow: auto; z-index: 10; }
+	#header ul{list-style: none;  float: right;width: 25%;}
+	#header li{display: inline-block; margin-right: 1em;}	
+	#header a{text-decoration: none; color: gray;}
+	#header label{font-family: fantasy; font-size: 2em; margin-bottom: 0em; color: gray;}
+	#nav{padding: 0em 5em 0em 5em;}
+	#nav ul{list-style: none; display: flex; justify-content: space-between; border: solid #d3d3d3; border-radius: 16px; padding: 0.4em 5em 0.4em 5em;}
+	#nav li{display: inline-block;}
+	input{border: none;}
+	img{margin-right: 0.4em;}
+	.col{float: left; margin: 2%; text-align: center; width: 25%; z-index: 5; border-top: solid #d3d3d3;}
+	.row:after{clear: both;}
+	.footer{ bottom: 1em;  position: fixed; z-index: 10;}
+	p{font-size: 20px; padding: 10px;}
+</style>
+<script type="text/javascript" language="javascript">
+
+	var items = document.getElementsByClassName("col");
+	var i;
+
+	function listview(){ for (i = 0; i < items.length; i++) {
+		items[i].style.width = "100%";
+	}}
+	function gridview(){ for ( i = 0; i < items.length; i++) {
+		items[i].style.width = "25%";
+	}}
+</script>
+<body>
+	<div id="header">	
+		<label>FONTS</label>
+		<ul>
+			<li><a href="#">CATALOG</a></li>
+			<li><a href="#">FEATURE</a></li>
+			<li><a href="#">ARTICLE</a></li>
+			<li><a href="#">ABOUT</a></li>
+		</ul>
+	</div>
+		<hr>
+	<div id="nav">
+		<ul>
+			<li>Search</li>
+			<li style="border-left: solid #d3d3d3;"><input type="text" name="search" id="search" placeholder="Fonts"></li>
+			<li style="border-left: solid #d3d3d3;"><input type="number" name="size" placeholder="Size"></li>
+			<li style="border-left: solid #d3d3d3;"><input type="radio" name="dark" onclick="document.bgColor='#c0c0c0'"><input type="radio" name="light"  onclick="document.bgColor='white'"></li>
+			<li><a id="grid" onclick="gridview()"><img src="grid.png" height="16em" width="17em"></a><a id="list" onclick="listview()"><img src="list.png" height="16em" width="17em"></a></li>
+			<li><a href="#" onclick="location.reload();"><img src="refresh.png" height="17em" width="13px"></a></li>
+		</ul>
+	</div>
+	</div>
+	<div class="row" id="row">
+		<div class="col" id="col"  style="font-family: Times New Roman; padding: 12px;">
+			TIMES NEWS ROMAN
+		<br>By Victor Lardent
+			<p>This card has FONT created by the above person</p>
+		</div>
+		<div class="col" id="col"  style="font-family: monospace; padding: 12px;">
+			MONOSPACE<br>
+			By Linotype
+			<p>This card has FONT created by the above person</p>
+		</div>
+		<div class="col" id="col"  style="font-family: Georgia; padding: 12px;">
+			GEORGIA
+			<br>By Matthew Carter
+			<p>This card has FONT created by the above person</p>
+		</div>
+	</div>	
+		<div class="col" id="col"  style="font-family: fantasy; padding: 12px;">
+		FANTASY
+			<br>By Sabrina Mariela Lopez
+			<p>This card has FONT created by the above person</p>
+		</div>
+		<div class="col" id="col"  style="font-family: sans-serif; padding: 12px;">
+			SANS-SERIF
+			<br>By William Caslon
+			<p>This card has FONT created by the above person</p>
+		</div>
+		<div class="col" id="col"  style="font-family: Helvetica; padding: 12px;">
+			HELVETICA
+			<br>By Max Miedinger and Edouard Hoffman
+			<p>This card has FONT created by the above person</p>
+		</div>
+	<div class="footer">		
+	    Sample project | Created By: Zuhura 
+	</div>
+</body>
+</html>
